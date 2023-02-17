@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1",
+    "query-string": "^8.1.0",
+    "url": "^0.11.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "jkprints",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emmabhi/jkprint.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emmabhi/jkprint/issues"
+  },
+  "homepage": "https://github.com/Emmabhi/jkprint#readme",
+  "description": ""
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+      input[type=submit] {
+      padding: 5px 15px;
+      background: #a7b5f1;
+      border: 0 none;
+      cursor: pointer;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      }
+      input[type=text] {
+        border-radius: 12px;
+    border-bottom: 2px solid rgb(8, 31, 84);
+    background-color: #a1c4f7;
+  	color: white;
+      }
+      </style>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JK</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+            <!-- ==============================================
+	    Credit Card Payment Section
+	    =============================================== -->		
+		<section class="credit-card">
+            <div class="container">
+             
+               <div class="card-holder">
+                 <div class="card-box bg-news">
+                  <div class="row">
+                   <div class="col-lg-6">
+                    <div class="img-box">
+                      <img src="https://bootdey.com/img/Content/avatar/avatar7.png" class="img-fluid" />
+                    </div>
+                   </div>
+                   <div class="col-lg-6">
+                   
+                   <form>
+                     <div class="card-details">
+                       <h3 class="title">Credit Card Details</h3>
+                       <div class="row">
+                         <div class="form-group col-sm-7">
+                          <div class="inner-addon right-addon">
+                           <label for="card-holder">Card Holder</label>
+                           <i class="far fa-user"></i>
+                           &emsp;&emsp;&emsp;<input id="card-holder" type="text" class="form-control" placeholder="Card Holder" aria-label="Card Holder" aria-describedby="basic-addon1" required>
+                          </div>	
+                         </div>
+                         <br>
+                         <div class="form-group col-sm-5">
+                           <label for="">Expiration Date</label>
+        
+                             &emsp;&ensp;<input type="text" class="form-control" placeholder="MM" aria-label="MM" aria-describedby="basic-addon1" required>
+                             <span class="date-separator">/</span>
+                             <input type="text" class="form-control" placeholder="YY" aria-label="YY" aria-describedby="basic-addon1" required> 
+                           </div>
+                         </div>
+                         <br>
+                         <div class="form-group col-sm-8">
+                          <div class="inner-addon right-addon">
+                           <label for="card-number">Card Number</label>
+                           <i class="far fa-credit-card"></i>
+                           &emsp;&emsp;&ensp;<input id="card-number" type="text" class="form-control" placeholder="Card Number" aria-label="Card Holder" aria-describedby="basic-addon1" required>
+                          </div>	
+                         </div>
+                         <br>
+                         <div class="form-group col-sm-4">
+                           <label for="cvc">CVC</label>
+                           &emsp;&emsp;&emsp;&emsp;&emsp;&ensp;&nbsp;<input id="cvc" type="text" class="form-control" placeholder="CVC" aria-label="Card Holder" aria-describedby="basic-addon1" required>
+                         </div>
+                         <br>
+                         <div class="form-group col-sm-12">
+                          <div class="d-flex justify-content-end pt-3">
+                            <br>
+                            &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="/order_complete/index.html">
+                              <a href="https://buy.stripe.com/test_6oEbMpf8H3kI7zq7ss">
+                              <input type="submit" value="Pay and Proceed" disabled></a>
+                          </div>
+                         </div>
+                         <br>
+                       </div>
+                     </div>
+                   </form>				
+                   
+                   </div><!--/col-lg-6 --> 
+             
+                  </div><!--/row -->
+                 </div><!--/card-box -->
+               </div><!--/card-holder -->		 
+               
+            </div><!--/container -->
+           </section>
+           <script>
+                    function enableSubmit(){
+                    let inputs = document.getElementsByClassName('form-control');
+                    let btn = document.querySelector('input[type="submit"]');
+                    let isValid = true;
+                    for (var i = 0; i < inputs.length; i++){
+                    let changedInput = inputs[i];
+                    if (changedInput.value.trim() === "" || changedInput.value === null){
+                    isValid = false;
+                    break;
+                    }
+                    }
+                    btn.disabled = !isValid;
+                    }
+           </script>
+</body>
+</html>
